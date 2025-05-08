@@ -74,10 +74,10 @@
 
 ## RELATIONSHIPS
 
-User to booking: 1 to many -> User can create many bookings
-User to review: 1 to many -> User can write many reviews
-User to messages: User can send and receive many messages
-User to property: 1 to many -> User can be a host to many properties
-Property to Booking: 1 to many -> property can have many bookings
-Property to Review: 1 to many -> property can have many reviews
-Booking to payment: 1 to 1 -> booking has one payment
+- User to booking: 1 to many -> User can create many bookings
+- User to review: 1 to many -> User can write many reviews
+- User to messages: User can send and receive many messages
+- User to property: 1 to many -> User can be a host to many properties
+- Property to Booking: 1 to many -> property can have many bookings
+- Property to Review: 1 to many -> property can have many reviews
+- Booking to payment: 1 to 1 -> booking has one payment
