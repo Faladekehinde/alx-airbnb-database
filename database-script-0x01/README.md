@@ -23,4 +23,4 @@ This database is designed using the principles of Third Normal Form (3NF) to ens
 * bookings	Links users to properties with timeframes
 * payments	Tracks payment details for bookings
 * reviews	Allows users to leave reviews on properties
-* messages	Manages user-to-user messages
+* messages	Manages user-to-user messagesl
