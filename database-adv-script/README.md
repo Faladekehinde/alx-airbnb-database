@@ -42,8 +42,10 @@ The goal of this task is to practice writing both correlated and non-correlated 
 # 🧠 What I Did
   * I wrote two types of subqueries:
 
-* 1. 🔄 Non-Correlated Subquery
-Purpose: Find all properties with an average rating greater than 4.0.
+## ✅ 1.Non-Correlated Subquery
+
+# 🧠 "Find all properties where the average rating is more than 4.0"
+
 Imagine you're looking through hotels and only want to see the ones people gave more than 4 stars on average.
 
 ## sql
@@ -55,7 +57,7 @@ WHERE property_id IN (
     GROUP BY property_id
     HAVING AVG(rating) > 4.0
 
-* 🧾 What’s going on?
+# 🧾 What’s going on?
 
 The mini-question inside () says:
 
