@@ -92,8 +92,56 @@ WHERE (
 
 For each user, we ask:
 
-"How many bookings did this user make?"
+* "How many bookings did this user make?"
 
-If the answer is more than 3, we show that user.
+* If the answer is more than 3, we show that user.
 
-This is a correlated subquery, because the mini-question depends on the outer user (u.user_id).
+* This is a correlated subquery, because the mini-question depends on the outer user (u.user_id).
+
+
+
+# 📊 Aggregations and Window Functions in SQL
+
+## 🎯 Objective
+
+The goal of this task is to understand how **SQL aggregation functions** (like `COUNT`) and **window functions** (like `ROW_NUMBER`, `RANK`) are used to analyze and rank data in a relational database.
+
+This practice was done using a booking system database that includes tables such as `User`, `Booking`, and `Property`.
+
+---
+
+## 🧠 What I Learned
+
+- How to use **`GROUP BY`** and aggregation functions like `COUNT()` to summarize data.
+- How to use **window functions** like `ROW_NUMBER()` and `RANK()` to rank records within partitions of data.
+- How to structure queries in **MySQL 8.0+** to analyze booking and property data efficiently.
+
+---
+
+## 📌 Tasks and Solutions
+
+### ✅ 1. Total Number of Bookings Made by Each User
+
+**Description:**  
+Count how many bookings each user has made.
+
+## 🧾 Explanation:
+
+* COUNT(*) counts how many rows (bookings) each user made.
+
+* GROUP BY user_id groups all bookings by each user.
+
+
+### ✅ 2. Rank Properties Based on Total Number of Bookings (Using ROW_NUMBER())
+
+Description:
+Rank each property based on how many times it has been booked, from highest to lowest.
+
+## 🧾 Explanation:
+
+* The inner query (booking_summary) counts how many bookings each property received.
+
+* The outer query applies ROW_NUMBER() to rank the properties based on total bookings.
+
+* ROW_NUMBER() gives a unique rank to each property (even if there are ties).
+
